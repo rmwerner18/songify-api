@@ -1,8 +1,9 @@
 class Song < ApplicationRecord
     has_many :song_chords
     has_many :chords, through: :song_chords
-    has_many :song_beats
-    has_many :beats, through: :song_beats
+    belongs_to :user
+    has_many :likes
+
 
     # def create_song_beats(type, array)
     #     array.each do |beat|

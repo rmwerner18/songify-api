@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_152623) do
+ActiveRecord::Schema.define(version: 2020_10_15_163150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "beats", force: :cascade do |t|
-    t.integer "value"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "chords", force: :cascade do |t|
     t.string "bass"
@@ -33,10 +27,9 @@ ActiveRecord::Schema.define(version: 2020_10_13_152623) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "song_beats", force: :cascade do |t|
-    t.integer "beat_id"
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "song_id"
-    t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -64,6 +57,14 @@ ActiveRecord::Schema.define(version: 2020_10_13_152623) do
     t.integer "viBeats", default: [], array: true
     t.integer "viiBeats", default: [], array: true
     t.integer "IBeats", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

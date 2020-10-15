@@ -1,2 +1,0 @@
-class BeatsController < ApplicationController
-end
