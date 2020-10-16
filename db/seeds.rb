@@ -6,9 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# i = 0
-# while i < 32
-#     Beat.create(value: i)
-#     i+=1
-# end
+User.create(username: 'robinpecknold', password: '12345')
 

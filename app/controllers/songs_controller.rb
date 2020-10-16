@@ -16,6 +16,7 @@ class SongsController < ApplicationController
                 SongChord.create(chord_id: chord.id, song_id: song.id)
             end
         end
+        render json: song
     end 
 
     def show
@@ -37,6 +38,7 @@ class SongsController < ApplicationController
                 SongChord.create(chord_id: chord.id, song_id: song.id)
             end
         end
+        render json: song
     end
 
     def destroy
@@ -49,6 +51,8 @@ class SongsController < ApplicationController
 
     def song_params 
         params.require(:song).permit(
+            :user_id,
+            :name,
             :bpm, 
             :instrument, 
             :melodyKey, 
