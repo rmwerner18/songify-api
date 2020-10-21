@@ -45,8 +45,9 @@ class SongsController < ApplicationController
 
     def destroy
         song = Song.find(params[:id])
+        user_id = song.user_id
         song.destroy
-        songs = Song.all
+        songs = Song.all.select {|song| song.user_id === user_id}
         render json: songs
     end
     private
