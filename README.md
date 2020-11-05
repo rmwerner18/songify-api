@@ -1,24 +1,20 @@
-# README
+## ChordMixer
+A music composition app that allows users to customize chords/melody/drum beat and hear it all played back to them on a loop.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo:
+https://www.loom.com/share/9b9c8d177a644c70a4f1629a97589088
 
-Things you may want to cover:
+## Backend
+https://github.com/rmwerner18/chord_mixer_client
 
-* Ruby version
+## Stack
+Ruby on Rails | PostgreSQL | BCrypt 
 
-* System dependencies
+## Contributors
+@Mimioj101 🐛
 
-* Configuration
+## Contact
+If you want to contact me you can reach me at rmwerner@umich.edu
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+This project uses the following license: GNU General Public License v3.0
