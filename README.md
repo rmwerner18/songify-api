@@ -4,7 +4,7 @@ A music composition app that allows users to customize chords/melody/drum beat a
 Demo:
 https://www.loom.com/share/9b9c8d177a644c70a4f1629a97589088
 
-## Backend
+## Frontend
 https://github.com/rmwerner18/chord_mixer_client
 
 ## Stack
