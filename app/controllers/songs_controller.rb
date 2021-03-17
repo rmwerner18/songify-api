@@ -49,6 +49,7 @@ class SongsController < ApplicationController
         song.destroy
         songs = Song.all.select {|song| song.user_id === user_id}
     end
+    
     private
 
     def song_params 
