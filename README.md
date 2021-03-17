@@ -10,9 +10,6 @@ https://github.com/rmwerner18/chord_mixer_client
 ## Stack
 Ruby on Rails | PostgreSQL | BCrypt 
 
-## Contributors
-@Mimioj101 🐛
-
 ## Contact
 If you want to contact me you can reach me at rmwerner@umich.edu
 
