@@ -5,6 +5,7 @@ class CreateChords < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :quality
       t.decimal :freqs, default: [], array: true
+      # condense formatted attrs into one
       t.string :formattedBass
       t.string :formattedName
       t.string :formattedQuality
