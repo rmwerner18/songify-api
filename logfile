@@ -4,3 +4,15 @@
 2022-11-03 00:00:44.197 CDT [19147] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2022-11-03 00:00:44.200 CDT [19148] LOG:  database system was shut down at 2022-11-02 23:59:35 CDT
 2022-11-03 00:00:44.203 CDT [19147] LOG:  database system is ready to accept connections
+2022-11-12 22:57:36.286 CST [19147] LOG:  received smart shutdown request
+2022-11-12 22:57:36.288 CST [19147] LOG:  background worker "logical replication launcher" (PID 19154) exited with exit code 1
+2022-11-12 22:57:36.288 CST [19149] LOG:  shutting down
+2022-11-12 22:57:36.298 CST [19147] LOG:  database system is shut down
+2022-11-14 22:32:43.515 CST [22049] LOG:  starting PostgreSQL 14.6 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2022-11-14 22:32:43.519 CST [22049] LOG:  listening on IPv6 address "::1", port 5432
+2022-11-14 22:32:43.519 CST [22049] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-11-14 22:32:43.520 CST [22049] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-11-14 22:32:43.523 CST [22050] LOG:  database system was shut down at 2022-11-14 22:32:00 CST
+2022-11-14 22:32:43.527 CST [22049] LOG:  database system is ready to accept connections
+2022-11-14 22:47:38.334 CST [96812] FATAL:  database "music_maker_api_development" does not exist
+2022-11-14 22:48:24.488 CST [96837] FATAL:  database "music_maker_api_development" does not exist
