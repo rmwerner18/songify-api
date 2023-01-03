@@ -9,10 +9,10 @@ class SongsController < ApplicationController
     def create
         song = Song.create(song_params)
         chord_params["chords"].each do |chord|
-            puts chord
+            # puts chord
             # compare params to db better via bass name and quaity
             # consider coding order of chords as attrs
-            existing_chord = Chord.all.find {|c| c.name == chord.name && c.bass == chord.bass && c.quality == chord.quality}
+            existing_chord = Chord.all.find {|c| c['name'] == chord['name'] and c['bass'] == chord['bass'] and c['quality'] == chord['quality']}
             if existing_chord 
                 SongChord.create(chord_id: existing_chord.id, song_id: song.id)
             else 
