@@ -12,7 +12,7 @@ class SongsController < ApplicationController
             puts chord
             # compare params to db better via bass name and quaity
             # consider coding order of chords as attrs
-            existing_chord = Chord.all.find {|c| c == chord}
+            existing_chord = Chord.all.find {|c| c.name == chord.name && c.bass == chord.bass && c.quality == chord.quality}
             if existing_chord 
                 SongChord.create(chord_id: existing_chord.id, song_id: song.id)
             else 

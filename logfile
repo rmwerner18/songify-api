@@ -16,3 +16,20 @@
 2022-11-14 22:32:43.527 CST [22049] LOG:  database system is ready to accept connections
 2022-11-14 22:47:38.334 CST [96812] FATAL:  database "music_maker_api_development" does not exist
 2022-11-14 22:48:24.488 CST [96837] FATAL:  database "music_maker_api_development" does not exist
+2022-12-28 16:38:12.108 CST [22049] LOG:  received smart shutdown request
+2022-12-28 16:38:12.111 CST [22049] LOG:  background worker "logical replication launcher" (PID 22056) exited with exit code 1
+2022-12-28 16:38:12.112 CST [22051] LOG:  shutting down
+2022-12-28 16:38:12.131 CST [22049] LOG:  database system is shut down
+2023-01-02 17:24:45.648 CST [5312] LOG:  starting PostgreSQL 14.6 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2023-01-02 17:24:45.649 CST [5312] LOG:  listening on IPv6 address "::1", port 5432
+2023-01-02 17:24:45.649 CST [5312] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-01-02 17:24:45.650 CST [5312] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-01-02 17:24:45.653 CST [5313] LOG:  database system was shut down at 2023-01-02 17:24:35 CST
+2023-01-02 17:24:45.659 CST [5312] LOG:  database system is ready to accept connections
+2023-01-02 17:24:58.759 CST [5327] FATAL:  database "music_maker_api_development" does not exist
+2023-01-02 17:30:52.929 CST [5359] FATAL:  database "music_maker_api_development" does not exist
+2023-01-02 17:32:09.663 CST [5376] FATAL:  database "music_maker_development_database" does not exist
+2023-01-02 23:53:26.182 CST [5312] LOG:  received smart shutdown request
+2023-01-02 23:53:26.187 CST [5312] LOG:  background worker "logical replication launcher" (PID 5319) exited with exit code 1
+2023-01-02 23:53:26.187 CST [5314] LOG:  shutting down
+2023-01-02 23:53:26.196 CST [5312] LOG:  database system is shut down
