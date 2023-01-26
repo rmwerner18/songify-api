@@ -30,16 +30,19 @@ class SongsController < ApplicationController
 
     def update
         song = Song.find(params[:id])
-        song.update(song_params)
-        song.song_chords.delete_all
-        chord_params["chords"].each do |chord|
-            puts chord
-            existing_chord = Chord.all.find {|c| c == chord}
-            if existing_chord 
-                SongChord.create(chord_id: existing_chord.id, song_id: song.id)
-            else 
-                chord = Chord.create(chord)
-                SongChord.create(chord_id: chord.id, song_id: song.id)
+        user_id = song.user_id
+        if @user.id == user_id
+            song.update(song_params)
+            song.song_chords.delete_all
+            chord_params["chords"].each do |chord|
+                puts chord
+                existing_chord = Chord.all.find {|c| c['name'] == chord['name'] and c['bass'] == chord['bass'] and c['quality'] == chord['quality']}
+                if existing_chord 
+                    SongChord.create(chord_id: existing_chord.id, song_id: song.id)
+                else 
+                    chord = Chord.create(chord)
+                    SongChord.create(chord_id: chord.id, song_id: song.id)
+                end
             end
         end
         render json: song
@@ -48,8 +51,10 @@ class SongsController < ApplicationController
     def destroy
         song = Song.find(params[:id])
         user_id = song.user_id
-        song.destroy
-        songs = Song.all.select {|song| song.user_id === user_id}
+        if @user.id == user_id
+            song.destroy
+            # songs = Song.all.select {|song| song.user_id === user_id}
+        end
     end
     
     private
@@ -59,6 +64,7 @@ class SongsController < ApplicationController
             :user_id,
             :name,
             :bpm, 
+            :swing,
             :instrument, 
             :melodyKey, 
             :melodyMode,
