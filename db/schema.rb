@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_23_005750) do
+ActiveRecord::Schema.define(version: 2023_01_30_202911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2023_01_23_005750) do
     t.integer "user_id"
     t.string "name"
     t.decimal "swing", precision: 2, scale: 2
+    t.string "melodyInstrument"
   end
 
   create_table "users", force: :cascade do |t|

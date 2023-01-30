@@ -64,6 +64,7 @@ class SongsController < ApplicationController
             :bpm, 
             :swing,
             :instrument, 
+            :melodyInstrument,
             :melodyKey, 
             :melodyMode,
             :snareBeats => [], 
