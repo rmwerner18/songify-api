@@ -1,4 +1,10 @@
 class PlaylistsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
+
+  def index
+    playlists = Playlist.all
+    render json: playlists
+  end
   
   def create
     playlist = Playlist.create(playlist_params)
