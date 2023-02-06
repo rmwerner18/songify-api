@@ -159,6 +159,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.4)
       loofah (~> 2.19, >= 2.19.1)
+    rails-perftest (0.0.7)
     railties (6.0.6)
       actionpack (= 6.0.6)
       activesupport (= 6.0.6)
@@ -215,6 +216,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.3)
+  rails-perftest
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
