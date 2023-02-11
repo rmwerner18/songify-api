@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_04_231503) do
+ActiveRecord::Schema.define(version: 2023_02_11_010659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,20 +60,20 @@ ActiveRecord::Schema.define(version: 2023_02_04_231503) do
     t.integer "snareBeats", default: [], array: true
     t.integer "kickBeats", default: [], array: true
     t.integer "hhBeats", default: [], array: true
-    t.integer "iBeats", default: [], array: true
-    t.integer "iiBeats", default: [], array: true
-    t.integer "iiiBeats", default: [], array: true
-    t.integer "ivBeats", default: [], array: true
-    t.integer "vBeats", default: [], array: true
-    t.integer "viBeats", default: [], array: true
-    t.integer "viiBeats", default: [], array: true
-    t.integer "IBeats", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.string "name"
     t.decimal "swing", precision: 2, scale: 2
     t.string "melodyInstrument"
+    t.jsonb "iBeats", default: "{}", null: false
+    t.jsonb "iiBeats", default: "{}", null: false
+    t.jsonb "iiiBeats", default: "{}", null: false
+    t.jsonb "ivBeats", default: "{}", null: false
+    t.jsonb "vBeats", default: "{}", null: false
+    t.jsonb "viBeats", default: "{}", null: false
+    t.jsonb "viiBeats", default: "{}", null: false
+    t.jsonb "IBeats", default: "{}", null: false
   end
 
   create_table "users", force: :cascade do |t|

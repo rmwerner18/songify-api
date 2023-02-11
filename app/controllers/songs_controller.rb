@@ -69,26 +69,22 @@ class SongsController < ApplicationController
             :snareBeats => [], 
             :kickBeats => [],
             :hhBeats => [],
-            :iBeats => [],
-            :iiBeats => [],
-            :iiiBeats => [],
-            :ivBeats => [],
-            :vBeats => [],
-            :viBeats => [],
-            :viiBeats => [],
-            :IBeats => []
+            :iBeats => {},
+            :iiBeats => {},
+            :iiiBeats => {},
+            :ivBeats => {},
+            :vBeats => {},
+            :viBeats => {},
+            :viiBeats => {},
+            :IBeats => {}
         )
     end
 
     def chord_params
         params.permit(:chords => [
                 :bass,
-                :formattedBass,
-                :formattedName,
-                :formattedQuality,
                 :name,
-                :quality,
-                :freqs => []
+                :quality
             ]
         )
     end
