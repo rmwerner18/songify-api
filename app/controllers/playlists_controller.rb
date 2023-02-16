@@ -11,6 +11,12 @@ class PlaylistsController < ApplicationController
     render json: playlist
   end
 
+  def update
+    playlist = Playlist.find(params[:id])
+    playlist.update(playlist_params)
+    render json: playlist
+  end
+
   private
 
   def playlist_params
