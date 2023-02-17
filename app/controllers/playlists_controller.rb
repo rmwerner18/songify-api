@@ -17,6 +17,11 @@ class PlaylistsController < ApplicationController
     render json: playlist
   end
 
+  def show
+    playlist = Playlist.find(params[:id])
+    render json: playlist
+  end
+
   private
 
   def playlist_params
