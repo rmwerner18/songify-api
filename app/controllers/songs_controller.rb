@@ -7,16 +7,7 @@ class SongsController < ApplicationController
 
     def create
         song = Song.create(song_params)
-        chord_params["chords"].each do |chord|
-            puts chord
-            existing_chord = Chord.all.find {|c| c['name'] == chord['name'] and c['bass'] == chord['bass'] and c['quality'] == chord['quality']}
-            if existing_chord 
-                SongChord.create(chord_id: existing_chord.id, song_id: song.id)
-            else 
-                chord = Chord.create(chord)
-                SongChord.create(chord_id: chord.id, song_id: song.id)
-            end
-        end
+        song.create_chords(chord_params)
         render json: song
     end 
 
@@ -31,16 +22,7 @@ class SongsController < ApplicationController
         if @user.id == user_id
             song.update(song_params)
             song.song_chords.delete_all
-            chord_params["chords"].each do |chord|
-                puts chord
-                existing_chord = Chord.all.find {|c| c['name'] == chord['name'] and c['bass'] == chord['bass'] and c['quality'] == chord['quality']}
-                if existing_chord 
-                    SongChord.create(chord_id: existing_chord.id, song_id: song.id)
-                else 
-                    chord = Chord.create(chord)
-                    SongChord.create(chord_id: chord.id, song_id: song.id)
-                end
-            end
+            song.create_chords(chord_params)
         end
         render json: song
     end
@@ -84,7 +66,9 @@ class SongsController < ApplicationController
         params.permit(:chords => [
                 :bass,
                 :name,
-                :quality
+                :quality,
+                :duration,
+                :start_beat
             ]
         )
     end
