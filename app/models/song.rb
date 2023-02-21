@@ -8,8 +8,6 @@ class Song < ApplicationRecord
 
   def create_chords(chord_params)
     chord_params["chords"].each do |chord|
-      puts chord_params
-      puts chord
       existing_chord = Chord.all.find {|c| c['name'] == chord['name'] and c['bass'] == chord['bass'] and c['quality'] == chord['quality']}
       chord_id = nil
       if existing_chord

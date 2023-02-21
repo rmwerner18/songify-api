@@ -39,37 +39,36 @@ class SongsController < ApplicationController
     private
 
     def song_params 
-        params.require(:song).permit(
-            :user_id,
-            :name,
-            :bpm, 
-            :swing,
-            :instrument, 
-            :melodyInstrument,
-            :melodyKey, 
-            :melodyMode,
-            :snareBeats => [], 
-            :kickBeats => [],
-            :hhBeats => [],
-            :iBeats => {},
-            :iiBeats => {},
-            :iiiBeats => {},
-            :ivBeats => {},
-            :vBeats => {},
-            :viBeats => {},
-            :viiBeats => {},
-            :IBeats => {}
-        )
+      params.require(:song).permit(
+        :user_id,
+        :name,
+        :bpm, 
+        :swing,
+        :instrument, 
+        :melodyInstrument,
+        :melodyKey, 
+        :melodyMode,
+        :snareBeats => [], 
+        :kickBeats => [],
+        :hhBeats => [],
+        :iBeats => {},
+        :iiBeats => {},
+        :iiiBeats => {},
+        :ivBeats => {},
+        :vBeats => {},
+        :viBeats => {},
+        :viiBeats => {},
+        :IBeats => {}
+      )
     end
 
     def chord_params
-        params.permit(:chords => [
-                :bass,
-                :name,
-                :quality,
-                :duration,
-                :start_beat
-            ]
-        )
+      params.permit(:chords => [
+        :bass,
+        :name,
+        :quality,
+        :duration,
+        :start_beat
+      ])
     end
 end
