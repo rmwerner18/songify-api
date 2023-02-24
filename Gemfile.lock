@@ -212,17 +212,17 @@ DEPENDENCIES
   faker (~> 2.14)
   jwt (~> 2.2)
   listen (~> 3.2)
-  pg (~> 1.4, >= 1.4.5)
+  pg
   puma (~> 4.1)
   rack-cors
-  rails (~> 6.0.3, >= 6.0.3.3)
+  rails
   rails-perftest
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.7p221
+   ruby 3.1.3p185
 
 BUNDLED WITH
    2.1.4
