@@ -1,10 +1,5 @@
 class ApplicationController < ActionController::API
     before_action :authorized
-    skip_before_action :authorized, only: [:fallback_index_html]
-
-    def fallback_index_html
-      render '/'
-    end
      
     def encode_token(payload)
         # don't forget to hide your secret in an environment variable
