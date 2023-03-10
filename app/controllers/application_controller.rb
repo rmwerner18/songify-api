@@ -3,7 +3,7 @@ class ApplicationController < ActionController::API
     skip_before_action :authorized, only: [:fallback_index_html]
 
     def fallback_index_html
-      render file: 'public/index.html'
+      render file: '/index.html'
     end
      
     def encode_token(payload)
