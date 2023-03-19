@@ -1,8 +1,13 @@
 class PlaylistsController < ApplicationController
-  skip_before_action :authorized, only: [:index, :show]
+  skip_before_action :authorized, only: [:index, :show, :playlists_by_user]
 
   def index
     playlists = Playlist.all
+    render json: playlists
+  end
+
+  def playlists_by_user
+    playlists = Playlist.where(user_id: params[:user_id])
     render json: playlists
   end
   
